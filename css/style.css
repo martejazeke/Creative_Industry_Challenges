@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  color: #FAFAFA;
+  background: rgb(47, 88, 139);
+  background: radial-gradient(circle, rgb(47, 88, 139) 0%, rgb(80, 98, 113) 100%);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  padding: 5px 75px;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: 110px;
+}
+
+.header.sticky {
+  transition: 0.5s;
+  padding: 5px 100px;
+  background-color: #141414;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  letter-spacing: 3px;
+}
+nav .nav_logo img {
+  max-width: 75px;
+}
+nav .nav_list {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  text-align: center;
+}
+nav .nav_link {
+  color: #E6E9EA;
+  font-size: 0.9rem;
+  transition: ease-out;
+}
+nav .nav_link:hover {
+  color: #FAFAFA;
+  transition: 0.3s ease-in;
+  font-size: 0.95rem;
+}
+
+#hero {
+  height: 100vh;
+  position: relative;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: hsla(0, 0%, 10%, 0.5);
+  z-index: -1;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  padding: 4rem 0;
+}
+.hero-container p {
+  text-align: center;
+  letter-spacing: 3px;
+}
+.hero-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -2;
+}
+
+.hero-text {
+  font-size: 4.875rem;
+  font-family: "Amiri", serif;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #ffffff;
+  text-align: center;
+  z-index: 1;
+}
+
+#about_bus {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #FAFAFA;
+}
+#about_bus img {
+  margin-top: 2rem;
+  width: 757px;
+  height: 650px;
+  float: right;
+}
+#about_bus .abt_bus_container {
+  padding-top: 10rem;
+  justify-content: center;
+  align-items: center;
+  padding-left: 4rem;
+}
+#about_bus .abt_bus_container h1 {
+  color: #141414;
+  font-family: "Amiri", serif;
+  font-size: 2rem;
+}
+#about_bus .abt_bus_container p {
+  color: #141414;
+  font-size: 1.25rem;
+  padding-bottom: 2.5rem;
+  line-height: 2rem;
+  width: clamp(500px, 40%, 600px);
+}
+#about_bus .abt_bus_container button {
+  color: #141414;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  font-family: "Lato", sans-serif;
+  border: 2px solid #141414;
+  padding: 1rem;
+  background-color: #FAFAFA;
+  text-align: center;
+  cursor: pointer;
+}
+#about_bus .abt_bus_container button:hover {
+  transition: 0.2s ease-in-out;
+  color: #FAFAFA;
+  background-color: #141414;
+}
+#about_bus .abt_bus_container button:active {
+  color: #141414;
+  background-color: #FAFAFA;
+  font-weight: 400;
+}
+#about_bus .abt_bus_container a {
+  color: #141414;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  font-family: "Lato", sans-serif;
+  border: 2px solid #141414;
+  padding: 1rem;
+  background-color: #FAFAFA;
+  text-align: center;
+  cursor: pointer;
+}
+#about_bus .abt_bus_container a:hover {
+  transition: 0.2s ease-in-out;
+  color: #FAFAFA;
+  background-color: #141414;
+}
+#about_bus .abt_bus_container a:active {
+  color: #141414;
+  background-color: #FAFAFA;
+  font-weight: 400;
+}
+
+#about_flight {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #141414;
+}
+#about_flight img {
+  position: absolute;
+  height: 1000px;
+  margin-right: 50rem;
+  right: -7%;
+}
+#about_flight .abt_flight_container {
+  padding: 0 3rem 0 0;
+  margin-left: 50rem;
+  order: 2;
+}
+#about_flight .abt_flight_container h1 {
+  color: #E6E9EA;
+  font-family: "Amiri", serif;
+  font-size: 3rem;
+}
+#about_flight .abt_flight_container p {
+  color: #E6E9EA;
+  font-size: 1.25rem;
+  padding-bottom: 2.5rem;
+  line-height: 2rem;
+  width: clamp(600px, 40%, 700px);
+}
+#about_flight .abt_flight_container a {
+  color: #E6E9EA;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  font-family: "Lato", sans-serif;
+  border: 2px solid #E6E9EA;
+  padding: 1rem;
+  background-color: #141414;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+#about_flight .abt_flight_container a:hover {
+  transition: 0.2s ease-in-out;
+  color: #141414;
+  background-color: #FAFAFA;
+}
+#about_flight .abt_flight_container a:active {
+  color: #FAFAFA;
+  background-color: #141414;
+  font-weight: 400;
+}
+
+#about_taxi {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #FAFAFA;
+}
+#about_taxi img {
+  position: absolute;
+  margin-top: 2rem;
+  width: 900px;
+  height: 650px;
+  float: right;
+  left: 50%;
+}
+#about_taxi .abt_taxi_container {
+  padding-top: 10rem;
+  justify-content: center;
+  align-items: center;
+  padding-left: 4rem;
+}
+#about_taxi .abt_taxi_container h1 {
+  color: #141414;
+  font-family: "Amiri", serif;
+  font-size: 2rem;
+}
+#about_taxi .abt_taxi_container p {
+  color: #141414;
+  font-size: 1.25rem;
+  padding-bottom: 2.5rem;
+  line-height: 2rem;
+  width: clamp(500px, 40%, 600px);
+}
+#about_taxi .abt_taxi_container a {
+  color: #141414;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  font-family: "Lato", sans-serif;
+  border: 2px solid #141414;
+  padding: 1rem;
+  background-color: #FAFAFA;
+  text-align: center;
+  cursor: pointer;
+}
+#about_taxi .abt_taxi_container a:hover {
+  transition: 0.2s ease-in-out;
+  color: #FAFAFA;
+  background-color: #141414;
+}
+#about_taxi .abt_taxi_container a:active {
+  color: #141414;
+  background-color: #FAFAFA;
+  font-weight: 400;
+}
+
+footer {
+  background-color: #141414;
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer p {
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

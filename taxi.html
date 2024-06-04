@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Taxi Fares | EmiRide</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3c0lOe49vcABflZT9sFJajFWdgT0vdAg&libraries=places"></script>
+    <link rel="stylesheet" href="css/taxi-style.css">
+
+</head>
+<body onload="initMap()">
+    <div class="container">
+        <header class="header">
+            <nav class="nav_container">
+                <span><a href="homepage.html" class="nav_logo"><img src="media/logo.png"></a></span>
+                <div class="nav_menu" id="nav_menu">
+                    <ul class="nav_list">
+                        <li class="nav_item">
+                            <a href="homepage.html" class="nav_link">HOME</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="bus.html" class="nav_link">BUS TIMINGS</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="flight.html" class="nav_link">BOOK A FLIGHT</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="taxi.html" class="nav_link">CHECK TAXI FARES</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="From" id="source">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="To" id="destination">
+                </div>
+                <div id="map" style="height:400px;width:100%"></div>
+                <button onclick="calcRoute()" class="btn btn-primary">Check Fare</button>
+                <div id="fare"></div>
+            </section>
+
+            <div class="modal fade" id="fareModal" tabindex="-1" role="dialog" aria-labelledby="fareModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="fareModalLabel">Fare Details</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p id="modalDistance"></p>
+                            <p id="modalFare"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+        </main>
+        
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="js/farecalc.js"></script>
+</html>

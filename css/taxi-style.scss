@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+$titlefont: 'Amiri', serif;
+$bodyfont: 'Lato', sans-serif;
+$titlecolor: #FAFAFA;
+$textcolor: #E6E9EA; 
+$bodycolor: #141414;
+$h1fontsize: 2.5rem;
+$h3fontsize: 1.5rem;
+$defaultfontsize: .938rem;
+$smallfontsize: .813rem;
+$fontregular: 400;
+$fontsemibold: 600;
+$fontbold: 700;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: $bodyfont;
+    color: $bodycolor;
+    background: $titlecolor;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    padding: 5px 75px;
+    top: 0;
+    left: 0;
+    height: 110px;
+    background-color: $bodycolor;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    letter-spacing: 3px;
+
+    .nav_logo img {
+        max-width: 75px;
+    }
+
+    .nav_list {
+        display: flex;
+        flex-direction: row;
+        column-gap: 2rem;
+        text-align: center;
+    }
+
+    .nav_link {
+        color: $textcolor;
+        font-size: 1.2rem; // Increased font size
+        transition: ease-in-out;
+    }
+
+    .nav_link:hover {
+        color: $titlecolor;
+        transition: 0.3s ease-in-out;
+        font-size: 1.25rem; // Increased font size on hover
+    }
+}
+
+section {
+    margin-top: 15rem;
+}
+
+.btn.btn-primary {
+    margin-top: 10px;
+    padding: 15px;
+    background-color: $titlecolor;
+    color: $bodycolor;
+    font-weight: $fontsemibold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border: 2px solid $bodycolor;
+}
+
+.btn.btn-primary:hover {
+    background-color: #0e0e0e;
+    transition: 0.3s ease-in-out;
+    color:$titlecolor;
+}
+
+
+#fare {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.modal-body {
+    font-size: 2rem;
+}
+
+.modal-header {
+    background-color: $bodycolor;
+    color: $titlecolor;
+}
+
+.modal-footer {
+    background-color: $bodycolor;
+    border-top: none;
+}
+
+.btn-default {
+    background-color: $titlecolor;
+    color: $bodycolor;
+}

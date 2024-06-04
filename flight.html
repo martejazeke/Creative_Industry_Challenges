@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emiride Flight Booking</title>
+    <link rel="stylesheet" href="css/flight-style.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav_container">
+            <span><a href="#hero" class="nav_logo"><img src="media/logo.png"></a></span>
+
+            <div class="nav_menu" id="nav_menu">
+                <ul class="nav_list">
+                    <li class="nav_item">
+                        <a href="homepage.html" class="nav_link">HOME</a>
+                    </li>
+
+                    <li class="nav_item">
+                        <a href="bus.html" class="nav_link">BUS TIMINGS</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="flight.html" class="nav_link">BOOK A FLIGHT</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="taxi.html" class="nav_link">CHECK TAXI FARES</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="booking-container">
+        <div class="content-container">
+            <div class="form-container">
+                <form id="flight-form">
+                    <label for="from">From:</label>
+                    <select id="from" name="from">
+                        <option value="Abu Dhabi">Zayed International Airport (Abu Dhabi)</option>
+                        <option value="Al Ain">Al Ain International Airport (Al Ain)</option>
+                        <option value="Al Maktoum">Al Maktoum International Airport (Al Maktoum)</option>
+                        <option value="Dubai">Dubai International Airport (Dubai)</option>
+                        <option value="Sharjah">Sharjah International Airport (Sharjah)</option>
+                        <option value="RAK">Ras Al Khaimah International Airport (RAK)</option>
+                        <option value="Fujairah">Fujairah International Airport (Fujairah)</option>
+                    </select>
+                    <label for="to">To:</label>
+                    <select id="to" name="to">
+                        <option value="Abu Dhabi">Zayed International Airport (Abu Dhabi)</option>
+                        <option value="Al Ain">Al Ain International Airport (Al Ain)</option>
+                        <option value="Al Maktoum">Al Maktoum International Airport (Al Maktoum)</option>
+                        <option value="Dubai">Dubai International Airport (Dubai)</option>
+                        <option value="Sharjah">Sharjah International Airport (Sharjah)</option>
+                        <option value="RAK">Ras Al Khaimah International Airport (RAK)</option>
+                        <option value="Fujairah">Fujairah International Airport (Fujairah)</option>
+                    </select>
+                    <label for="adults">Adults:</label>
+                    <select id="adults" name="adults">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <label for="children">Children:</label>
+                    <select id="children" name="children">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <button type="button" onclick="searchFlights()">Search Flights</button>
+                </form>
+            </div>
+            <div class="map-container">
+                <iframe src="https://my.atlist.com/map/42b0cc7f-eee1-4fe2-9366-49417477c0a3/?share=true" allow="geolocation 'self' https://my.atlist.com" width="100%" height="400px" loading="lazy" frameborder="0" scrolling="no" allowfullscreen id="atlist-embed"></iframe>
+            </div>
+        </div>
+        <div id="results" class="results-container"></div>
+    </div>
+    <script src="js/flight-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Bus Timings | EmiRide</title>
+    <link rel= "stylesheet" href="css/bus-timings.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="nav_container">
+                <span><a href="homepage.html" class="nav_logo"><img src="media/logo.png"></a></span>
+                <div class="nav_menu" id="nav_menu">
+                    <ul class="nav_list">
+                        <li class="nav_item">
+                            <a href="homepage.html" class="nav_link">HOME</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="bus.html" class="nav_link">BUS TIMINGS</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="flight.html" class="nav_link">BOOK A FLIGHT</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="taxi.html" class="nav_link">CHECK TAXI FARES</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="dropdown">
+                <div class="dropdown-container">
+                    <select id="emirate-dropdown" onchange="filterEmirates()">
+                        <option value="all">ALL EMIRATES</option>
+                        <option value="AUH">ABU DHABI</option>
+                        <option value="DXB">DUBAI</option>
+                        <option value="SHJ">SHARJAH</option>
+                        <option value="AJN">AJMAN</option>
+                        <option value="FUJ">FUJAIRAH</option>
+                        <option value="RAK">RAS AL KHAIMAH</option>
+                        <option value="UAQ">UMM AL QUWAIN</option>
+                    </select>
+                </div>
+            </section>
+            
+            <div class="emirate-container">
+                <section class="emirate-section" id="AUH">
+                    <div class="emirate-card" data-emirate="AUH">
+                        <div class="badge red">5</div>
+                        <div>AUH</div>
+                        <div class="time">12:01 PM</div>
+                    </div>
+
+                    <div class="emirate-card" data-emirate="AUH">
+                        <div class="badge red">7</div>
+                        <div>AUH</div>
+                        <div class="time">12:05 PM</div>
+                    </div>
+
+                    <div class="emirate-card" data-emirate="AUH">
+                        <div class="badge red">8</div>
+                        <div>AUH</div>
+                        <div class="time">12:08 PM</div>
+                    </div>
+
+                    <div class="emirate-card" data-emirate="AUH">
+                        <div class="badge red">9</div>
+                        <div>AUH</div>
+                        <div class="time">12:10 PM</div>
+                    </div>
+
+                    <div class="emirate-card" data-emirate="AUH">
+                        <div class="badge red">11</div>
+                        <div>AUH</div>
+                        <div class="time">12:13 PM</div>
+                    </div>
+
+                    <div class="emirate-card" data-emirate="AUH">
+                        <div class="badge red">L43</div>
+                        <div>AUH</div>
+                        <div class="time">12:13 PM</div>
+                    </div>
+                </section>
+
+                <section class="emirate-section" id="DXB">
+                    <div class="emirate-card" data-emirate="DXB">
+                        <div class="badge red">11A</div>
+                        <div>DXB</div>
+                        <div class="time">12:00 PM</div>
+                    </div>
+
+                    <div class="emirate-card" data-emirate="DXB">
+                        <div class="badge red">DO3</div>
+                        <div>DXB</div>
+                        <div class="time">12:06 PM</div>
+                    </div>
+
+                    <div class="emirate-card" data-emirate="DXB">
+                        <div class="badge red">HO3</div>
+                        <div>DXB</div>
+                        <div class="time">1:01 PM</div>
+                    </div>
+
+                    <div class="emirate-card" data-emirate="DXB">
+                        <div class="badge red">SM1</div>
+                        <div>DXB</div>
+                        <div class="time">12:45 PM</div>
+                    </div>
+
+                    <div class="emirate-card" data-emirate="DXB">
+                        <div class="badge red">C01</div>
+                        <div>DXB</div>
+                        <div class="time">12:37 PM</div>
+                    </div>
+
+                </section>
+
+                <section class="emirate-section" id="SHJ">
+                    <div class="emirate-card" data-emirate="SHJ">
+                        <div class="badge brown">1</div>
+                        <div>SHJ</div>
+                        <div class="time">12:10 PM</div>
+                    </div>
+
+                    <div class="emirate-card" data-emirate="SHJ">
+                        <div class="badge brown">3</div>
+                        <div>SHJ</div>
+                        <div class="time">3:05 PM</div>
+                    </div>
+
+                    <div class="emirate-card" data-emirate="SHJ">
+                        <div class="badge brown">8</div>
+                        <div>SHJ</div>
+                        <div class="time">2:41 PM</div>
+                    </div>
+
+                    <div class="emirate-card" data-emirate="SHJ">
+                        <div class="badge brown">9</div>
+                        <div>SHJ</div>
+                        <div class="time">2:11 PM</div>
+                    </div>
+
+                    <div class="emirate-card" data-emirate="SHJ">
+                        <div class="badge brown">14</div>
+                        <div>SHJ</div>
+                        <div class="time">12:01 PM</div>
+                    </div>
+
+                    <div class="emirate-card" data-emirate="SHJ">
+                        <div class="badge brown">14X</div>
+                        <div>SHJ</div>
+                        <div class="time">12:35 PM</div>
+                    </div>
+                </section>
+
+                <section class="emirate-section" id="AJN">
+                    <div class="emirate-card" data-emirate="AJN">
+                        <div class="badge lightgrey">10194</div>
+                        <div>AJN</div>
+                        <div class="time">12:09 PM</div>
+                    </div>
+
+                    <div class="emirate-card" data-emirate="AJN">
+                        <div class="badge lightgrey">25844</div>
+                        <div>AJN</div>
+                        <div class="time">1:30 PM</div>
+                    </div>
+
+                    <div class="emirate-card" data-emirate="AJN">
+                        <div class="badge lightgrey">47932</div>
+                        <div>AJN</div>
+                        <div class="time">3:01 PM</div>
+                    </div>
+
+                    <div class="emirate-card" data-emirate="AJN">
+                        <div class="badge lightgrey">87679</div>
+                        <div>AJN</div>
+                        <div class="time">3:01 PM</div>
+                    </div>
+
+                    <div class="emirate-card" data-emirate="AJN">
+                        <div class="badge lightgrey">21569</div>
+                        <div>AJN</div>
+                        <div class="time">4:01 PM</div>
+                    </div>
+                </section>
+
+                <section class="emirate-section" id="UAQ">
+                    <div class="emirate-card" data-emirate="UAQ">
+                        <div class="badge lightblue">G-DOWN</div>
+                        <div>UAQ</div>
+                        <div class="time">5:01 PM</div>
+                    </div>
+
+                    <div class="emirate-card" data-emirate="UAQ">
+                        <div class="badge lightblue">G-UP</div>
+                        <div>UAQ</div>
+                        <div class="time">5:11 PM</div>
+                    </div>
+
+                    <div class="emirate-card" data-emirate="UAQ">
+                        <div class="badge lightblue">B-UP</div>
+                        <div>UAQ</div>
+                        <div class="time">5:02 PM</div>
+                    </div>
+
+                    <div class="emirate-card" data-emirate="UAQ">
+                        <div class="badge lightblue">R-UP</div>
+                        <div>UAQ</div>
+                        <div class="time">5:03 PM</div>
+                    </div>
+                </section>
+
+                <section class="emirate-section" id="RAK">
+                    <div class="emirate-card" data-emirate="RAK">
+                        <div class="badge grey">G-UP</div>
+                        <div>RAK</div>
+                        <div class="time">5:02 PM</div>
+                    </div>
+
+                    <div class="emirate-card" data-emirate="RAK">
+                        <div class="badge grey">R-DOWN</div>
+                        <div>RAK</div>
+                        <div class="time">5:31 PM</div>
+                    </div>
+                </section>
+
+                <section class="emirate-section" id="FUJ">
+                    <div class="emirate-card" data-emirate="FUJ">
+                        <div class="badge black">201</div>
+                        <div>FUJ</div>
+                        <div class="time">6:41 PM</div>
+                    </div>
+
+                    <div class="emirate-card" data-emirate="FUJ">
+                        <div class="badge black">201</div>
+                        <div>FUJ</div>
+                        <div class="time">7:41 PM</div>
+                    </div>
+                </section>
+                <script src="js/bus.js"></script>
+                <script src="js/gsap.min.js"></script>
+            </div>
+            
+        </main>
+        
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Amiri' rel='stylesheet'>
+    <title>Register - EmiRide</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: "Amiri";
+        }
+        p {
+            font-family: "Lato", sans-serif;
+        }
+        .video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+        h1{
+            color: #fafafa;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .register-box {
+            background-color: #252525;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            color: white;
+        }
+        .register-box input {
+            text-align: center;
+            justify-content: center;
+            display: inline-block;
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+        .register-box button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #555;
+            color: white;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .register-box a {
+            color: #ddd;
+            text-decoration: none;
+        }
+        .register-box a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <video src="media/timelapse.mov" autoplay muted loop class="video-background"></video>
+    <div class="container">
+        <div class="register-box">
+            <h1>Registration</h1>
+            <form action="registerconnect.php" method="post">
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="password" placeholder="Password" name="password" required>
+                <button type="submit">Register</button>
+                <p>Have an account? <a href="login.html">Login here.</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Amiri' rel='stylesheet'>
+    <title>Login - EmiRide</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: "Amiri";
+        }
+        p {
+            font-family: "Lato", sans-serif;
+        }
+        .video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .login-box {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            color: white;
+        }
+        .login-box input {
+            text-align: center;
+            justify-content: center;
+            display: inline-block;
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+        .login-box button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #555;
+            color: white;
+            cursor: pointer;
+        }
+        .login-box a {
+            color: #ddd;
+            text-decoration: none;
+        }
+        .login-box a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <video src="media/timelapse.mov" autoplay loop muted class="video-background"></video>
+    <div class="container">
+        <div class="login-box">
+            <h1>EmiRide - The future of UAE transportation!</h1>
+            <form action="loginconnect.php" method="post">
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="password" placeholder="Password" name="password" required>
+                <button type="submit">Login</button>
+                <p>Don't have an account yet? <a href="Register - EmiRide.html">Register here.</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

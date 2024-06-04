@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+$titlefont: 'Amiri', serif;
+$bodyfont: 'Lato', sans-serif;
+$titlecolor: #FAFAFA;
+$textcolor: #E6E9EA; 
+$bodycolor: #141414;
+$h1fontsize: 2.5rem;
+$h3fontsize: 1.5rem;
+$defaultfontsize: .938rem;
+$smallfontsize: .813rem;
+$fontregular: 400;
+$fontsemibold: 600;
+$fontbold: 700;
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: $bodyfont;
+    color: $titlecolor;
+    background: rgb(47,88,139);
+    background: radial-gradient(circle, rgba(47,88,139,1) 0%, rgba(80,98,113,1) 100%);
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.header{
+    transition: 0.4s;
+    position: fixed;
+    width: 100%;
+    padding: 5px 75px;
+    top:0;
+    left: 0;
+    z-index: 100;
+    height: 110px;
+}
+
+.header.sticky{
+    transition: 0.5s;
+    padding: 5px 100px;
+    background-color: $bodycolor;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom:5px;
+    letter-spacing: 3px;
+
+    .nav_logo img{
+        max-width: 75px;
+    }
+
+    .nav_list{
+        display: flex;
+        flex-direction: row;
+        column-gap: 2rem;
+        text-align: center;
+    }
+
+    .nav_link{
+        color: $textcolor;
+        font-size: .90rem;
+        transition: ease-out;
+    }
+
+    .nav_link:hover{
+        color: $titlecolor;
+        transition: 0.3s ease-in;
+        font-size: .95rem;
+    }
+}
+
+#hero{
+    height: 100vh;
+    position: relative;
+}
+
+#hero::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: hsl(0, 0, 10%, .5);
+    z-index: -1;
+}
+
+
+.hero-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    position: relative; 
+    padding: 4rem 0;
+
+    p{
+        text-align: center;
+        letter-spacing: 3px;
+    }
+
+    video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -2; 
+    }
+
+}
+
+.hero-text{
+        font-size: 4.875rem;
+        font-family: $titlefont;
+        font-weight: bold; 
+        line-height: 1.2;
+        color: #ffffff; 
+        text-align: center;
+        z-index: 1; 
+}
+
+#about_bus{
+
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: $titlecolor;
+
+    img{
+        margin-top: 2rem;
+        width: 757px;
+        height: 650px;
+        float: right;
+    }
+
+    .abt_bus_container{
+        
+        padding-top: 10rem;
+        justify-content: center;
+        align-items: center;
+        padding-left: 4rem;
+
+        h1{
+            color: $bodycolor;
+            font-family: $titlefont;
+            font-size: 2rem;
+        }
+    
+        p{
+            color: $bodycolor;
+            font-size: 1.25rem;
+            padding-bottom: 2.5rem;
+            line-height: 2rem;
+            width: clamp(500px, 40%, 600px);
+        }
+
+        button{
+            color: $bodycolor;
+            letter-spacing: 1px;
+            font-size: 1.25rem;
+            font-family: $bodyfont;
+            border: 2px solid $bodycolor;
+            padding: 1rem;
+            background-color: $titlecolor;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        button:hover{
+            transition: .2s ease-in-out;
+            color: $titlecolor;
+            background-color: $bodycolor;
+        }
+
+        button:active{
+            color: $bodycolor;
+            background-color: $titlecolor;
+            font-weight: $fontregular;
+        }
+
+        a{
+            color: $bodycolor;
+            letter-spacing: 1px;
+            font-size: 1.25rem;
+            font-family: $bodyfont;
+            border: 2px solid $bodycolor;
+            padding: 1rem;
+            background-color: $titlecolor;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        a:hover{
+            transition: .2s ease-in-out;
+            color: $titlecolor;
+            background-color: $bodycolor;
+        }
+
+        a:active{
+            color: $bodycolor;
+            background-color: $titlecolor;
+            font-weight: $fontregular;
+        }
+    }
+
+}
+
+#about_flight{
+    display:flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: $bodycolor;
+
+
+    img{
+        position: absolute;
+        height: 1000px;
+        margin-right: 50rem;
+        right: -7%;
+    }
+
+    .abt_flight_container{
+        
+        padding: 0 3rem 0 0;
+        margin-left: 50rem;
+        order:2;
+
+        h1{
+            color: $textcolor;
+            font-family: $titlefont;
+            font-size: 3rem;
+        }
+    
+        p{
+            color: $textcolor;
+            font-size: 1.25rem;
+            padding-bottom: 2.5rem;
+            line-height: 2rem;
+            width: clamp(600px, 40%, 700px);
+        }
+
+        a{
+            color: $textcolor;
+            letter-spacing: 1px;
+            font-size: 1.25rem;
+            font-family: $bodyfont;
+            border: 2px solid $textcolor;
+            padding: 1rem;
+            background-color: $bodycolor;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        a:hover{
+            transition: .2s ease-in-out;
+            color: $bodycolor;
+            background-color: $titlecolor;
+        }
+
+        a:active{
+            color: $titlecolor;
+            background-color: $bodycolor;
+            font-weight: $fontregular;
+        }
+    }
+}
+
+
+#about_taxi{
+
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: $titlecolor;
+
+    img{
+        position: absolute;
+        margin-top: 2rem;
+        width:900px;
+        height: 650px;
+        float: right;
+        left: 50%;
+    }
+
+    .abt_taxi_container{
+        
+        padding-top: 10rem;
+        justify-content: center;
+        align-items: center;
+        padding-left: 4rem;
+
+        h1{
+            color: $bodycolor;
+            font-family: $titlefont;
+            font-size: 2rem;
+        }
+    
+        p{
+            color: $bodycolor;
+            font-size: 1.25rem;
+            padding-bottom: 2.5rem;
+            line-height: 2rem;
+            width: clamp(500px, 40%, 600px);
+        }
+
+        a{
+            color: $bodycolor;
+            letter-spacing: 1px;
+            font-size: 1.25rem;
+            font-family: $bodyfont;
+            border: 2px solid $bodycolor;
+            padding: 1rem;
+            background-color: $titlecolor;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        a:hover{
+            transition: .2s ease-in-out;
+            color: $titlecolor;
+            background-color: $bodycolor;
+        }
+
+        a:active{
+            color: $bodycolor;
+            background-color: $titlecolor;
+            font-weight: $fontregular;
+        }
+
+        
+    }
+
+}
+
+footer{
+    background-color: $bodycolor;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p{
+        text-align: center;
+    }
+}
